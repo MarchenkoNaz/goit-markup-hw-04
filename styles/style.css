@@ -55,11 +55,6 @@ p {
 .icon {
   display: inline-block;
 }
-.contactlink__icon {
-  margin-right: 8px;
-  fill: #757575;
-  vertical-align: middle;
-}
 
 /* #container */
 .container {
@@ -182,9 +177,16 @@ body {
 .contacts-nav .contactlink:hover,
 .contacts-nav .contactlink:focus {
   color: var(--hover-focus-color);
+  fill: var(--hover-focus-color);
 }
 .contacts-nav > .list-item + .list-item {
   margin-left: 50px;
+}
+
+.contactlink__icon {
+  margin-right: 8px;
+  fill: currentColor;
+  vertical-align: middle;
 }
 
 /* #hero */
