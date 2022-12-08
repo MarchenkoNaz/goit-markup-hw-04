@@ -194,7 +194,7 @@ body {
   width: 100%;
   padding-top: 200px;
   padding-bottom: 191px;
-  background: url('/images/bgi.jpg'), rgba(47, 48, 58, 0.4);
+  background: url('./images/bgi.jpg'), rgba(47, 48, 58, 0.4);
   background-position: center;
   background-repeat: no-repeat;
 }
