@@ -22,6 +22,7 @@
   --link-text-color: rgba(255, 255, 255, 0.6);
   --button-text-color: #212121;
   --font-text-color: #000000;
+  --icon-color: #afb1b8;
 
   --card-gap: 30px;
   --primary-font-size: 14px;
@@ -50,6 +51,16 @@ p {
   padding: 0;
 }
 
+/* #icons */
+.icon {
+  display: inline-block;
+}
+.contactlink__icon {
+  margin-right: 8px;
+  fill: #757575;
+  vertical-align: middle;
+}
+
 /* #container */
 .container {
   /* outline: 1px solid tomato; */
@@ -58,9 +69,6 @@ p {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-}
-.contactlink-icon:hover {
-  color: blue;
 }
 
 /* #lists */
@@ -182,11 +190,13 @@ body {
 /* #hero */
 .hero {
   margin: 0;
-  background-color: var(--footer-hero-background-color);
   text-align: center;
   width: 100%;
   padding-top: 200px;
   padding-bottom: 191px;
+  background: url('/images/bgi.jpg'), rgba(47, 48, 58, 0.4);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -228,6 +238,13 @@ body {
 .list-benefits > .list-item {
   flex-basis: calc(100% / 4 - var(--card-gap));
   margin-left: var(--card-gap);
+}
+.benefit-block {
+  background-color: var(--button-background-color);
+  border-radius: 4px;
+  text-align: center;
+  padding: 25px 100px;
+  margin-bottom: 30px;
 }
 
 .benefits-title {
@@ -286,8 +303,9 @@ img {
 .item-card {
   flex-basis: calc(100% / 4 - var(--card-gap));
   margin-left: var(--card-gap);
-  display: block;
-
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--secondary-text-color);
 }
 
@@ -308,8 +326,89 @@ img {
   margin: 0;
   line-height: 1.19;
 }
+/* $social-icons*/
+.social-links {
+  padding-top: 16px;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+.social-links__list {
+  display: flex;
+  justify-content: space-between;
+}
+.social-links__item {
+  margin-left: 10px;
+  color: var(--icon-color);
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  border-radius: 50%;
+}
+.social-links__item:first-child {
+  margin-left: -10px;
+}
+.social-links__link {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0;
+}
+.social-links__icon {
+  fill: currentColor;
+}
+
+.social-links__item:hover {
+  background-color: var(--hover-focus-color);
+  color: var(--secondary-text-color);
+}
+
+/* #client section */
+
+.client-block__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-gap));
+}
+
+.client-block__item {
+  width: 170px;
+  height: 92px;
+  flex-basis: calc(100% / 6 - var(--card-gap));
+  margin-left: var(--card-gap);
+}
+
+.client-block__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--icon-color);
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.client-block__link:hover,
+.client-block__link:focus {
+  color: var(--hover-focus-color);
+  border: 1px solid var(--hover-focus-color);
+}
+.client-block__icon {
+  fill: currentColor;
+}
 
 /* #footer */
+.address-container {
+  margin-right: 70px;
+}
+.gap-container {
+  align-items: baseline;
+}
 .footer {
   background-color: var(--footer-hero-background-color);
   width: 100%;
@@ -356,10 +455,32 @@ img {
 
 .address-contacts {
   margin-bottom: -9px;
+  font-style: normal;
 }
 
 .address-contacts .list-item {
   margin-bottom: 9px;
+}
+
+.footer-social-links {
+  margin-left: 70px;
+}
+.footer-social-links__title {
+  font-size: var(--primary-font-size);
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+/* $icon-footer */
+.footer-social-links .social-links__item {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+.footer-social-links .social-links__item:hover {
+  background-color: var(--hover-focus-color);
+  color: var(--secondary-text-color);
 }
 
 /* !PORTFOLIO.HTML */
@@ -423,6 +544,10 @@ img {
   margin-bottom: var(--card-gap);
   margin-left: var(--card-gap);
 }
+.cards-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .cards-link {
   text-decoration: none;
@@ -451,6 +576,5 @@ img {
   line-height: 1.88;
 }
 
-address {
-  font-style: normal;
+.address {
 }
