@@ -59,6 +59,9 @@ p {
   padding-left: 15px;
   padding-right: 15px;
 }
+.contactlink-icon:hover {
+  color: blue;
+}
 
 /* #lists */
 .lists {
