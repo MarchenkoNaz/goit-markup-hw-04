@@ -196,7 +196,7 @@ body {
   width: 100%;
   padding-top: 200px;
   padding-bottom: 191px;
-  background: url('../images/bgi.jpg'), rgba(47, 48, 58, 0.4);
+  background: rgba(47, 48, 58, 0.4) url('../images/bgi.jpg');
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -242,10 +242,14 @@ body {
   margin-left: var(--card-gap);
 }
 .benefit-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
   background-color: var(--button-background-color);
   border-radius: 4px;
   text-align: center;
-  padding: 25px 100px;
   margin-bottom: 30px;
 }
 
@@ -326,17 +330,14 @@ img {
 }
 .card-description {
   margin: 0;
+  margin-bottom: 16px;
   line-height: 1.19;
 }
 /* $social-icons*/
-.social-links {
-  padding-top: 16px;
-  padding-right: 32px;
-  padding-left: 32px;
-}
 .social-links__list {
+  margin-left: -10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .social-links__item {
   margin-left: 10px;
@@ -351,9 +352,7 @@ img {
   cursor: pointer;
   border-radius: 50%;
 }
-.social-links__item:first-child {
-  margin-left: -10px;
-}
+
 .social-links__link {
   padding: 0;
   margin: 0;
@@ -408,7 +407,7 @@ img {
 .address-container {
   margin-right: 70px;
 }
-.gap-container {
+.footer .container {
   align-items: baseline;
 }
 .footer {
@@ -464,11 +463,9 @@ img {
   margin-bottom: 9px;
 }
 
-.footer-social-links {
-  margin-left: 70px;
-}
 .footer-social-links__title {
   font-size: var(--primary-font-size);
+  font-weight: 700;
   line-height: 1.1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -546,14 +543,16 @@ img {
   margin-bottom: var(--card-gap);
   margin-left: var(--card-gap);
 }
-.cards-item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 .cards-link {
+  display: block;
   text-decoration: none;
   color: var(--primary-text-color);
+}
+.cards-link:hover,
+.cards-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .cards-link > .card-description {
